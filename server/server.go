@@ -24,7 +24,7 @@ func Serve() (*gin.Engine, error) {
 	//允许跨域
 	app.Use(helper.HandleCors())
 
-	app.POST("/login", middleware.GenerateToken, HandleLogin)
+	app.GET("/login", middleware.GenerateToken, HandleLogin)
 	app.GET("/home", middleware.ParseToken, HandleHome)
 
 	//设置端口

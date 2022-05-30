@@ -37,6 +37,7 @@ func GenerateToken(ctx *gin.Context) {
 			"token": tokenStr,
 		})
 	}
+	ctx.Abort()
 }
 
 func ParseToken(ctx *gin.Context) {
@@ -51,7 +52,8 @@ func ParseToken(ctx *gin.Context) {
 		})
 	} else {
 		ctx.JSON(400, map[string]string{
-			"msg": "服务器异常,请稍后再试",
+			"msg": "未认证用户",
 		})
 	}
+	ctx.Abort()
 }
