@@ -3,8 +3,8 @@ package server
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"web/helper"
-	"web/middleware"
+	"web/img/helper"
+	"web/img/middleware"
 )
 
 func HandleLogin(ctx *gin.Context) {

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	"web/database"
-	"web/server"
+	"web/img/database"
+	"web/img/server"
 )
 
 func main() {
@@ -22,4 +22,5 @@ func main() {
 	} else {
 		fmt.Println("成功连接数据库")
 	}
+
 }

@@ -32,12 +32,13 @@ func GenerateToken(ctx *gin.Context) {
 		ctx.JSON(500, map[string]string{
 			"msg": "服务器异常,请稍后再试",
 		})
+		ctx.Abort()
 	} else {
 		ctx.JSON(200, map[string]string{
 			"token": tokenStr,
 		})
 	}
-	ctx.Abort()
+
 }
 
 func ParseToken(ctx *gin.Context) {
